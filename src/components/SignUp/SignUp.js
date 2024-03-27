@@ -19,7 +19,7 @@ const SignUpComponentS = ({onPress, value , setValue, placeholder, secureTextEnt
   const navigation = useNavigation();
 
 const onLoginpressed= () => {
-console.warn('LogIn');
+
 
 navigation.navigate('Login');
 };

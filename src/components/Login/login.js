@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import SignUp from '../SignUp';
 
 
-import dashboard from '../../Dashboard/Consultant';
+import Interface from '../../Interface/Consultant';
 
 
 
@@ -14,16 +14,15 @@ const LoginComponent = ({onPress, value , setValue, placeholder, secureTextEntry
 
   const navigation = useNavigation();
 
-const onLoginpressed= () => {
-console.warn('sign in');
+const onSignupPressed= () => {
 
 navigation.navigate('SignUp');
 };
 
-const onDashboardpressed= () => {
-  console.warn('dashboard');
+const onInterfacepressed= () => {
+
   
-  navigation.navigate('Dashboard');
+  navigation.navigate('Interface');
 };
   return (
     <View style={styles.container}>
@@ -42,9 +41,9 @@ const onDashboardpressed= () => {
           <TextInput value={password} onChangeText={setPassword} style={styles.input} placeholder="Enter your password" secureTextEntry={true} />
         </View>
         <TouchableOpacity  style={styles.button}>
-          <Text onPress={onDashboardpressed} style={styles.buttonText}>Login</Text>
+          <Text onPress={onInterfacepressed} style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
-        <Text style={styles.signUpText}>Don't have an account? Sign up <Text onPress={onLoginpressed} style={styles.link}>here</Text></Text>
+        <Text style={styles.signUpText}>Don't have an account? Sign up <Text onPress={onSignupPressed} style={styles.link}>here</Text></Text>
       </View>
     </View>
   );

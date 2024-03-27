@@ -3,9 +3,12 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+
 import Login from '../components/Login';
 import SignUp from '../components/SignUp';
-import Dashboard from '../Dashboard/Consultant';
+import Interface from '../Interface/Pmanager';
 
 const Stack = createNativeStackNavigator();
 
@@ -15,7 +18,10 @@ const Navigation = () => {
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="SignUp" component={SignUp} />
-        <Stack.Screen name="Dashboard" component={Dashboard}/>
+        <Stack.Screen name="Interface" component={Interface}/>
+        
+
+        
         
       </Stack.Navigator>
     </NavigationContainer>
